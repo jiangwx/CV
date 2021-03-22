@@ -1,0 +1,222 @@
+%-------------------------
+% Resume in Latex
+% Author : Amlaan Bhoi
+% Adapted from: Sourabh Bajaj
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[UTF8]{ctex}
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont=AdobeHeitiStd-Regular.otf]{AdobeSongStd-Light.otf}
+\setCJKsansfont{AdobeHeitiStd-Regular.otf}
+\setCJKmonofont{AdobeHeitiStd-Light.otf}
+
+
+\usepackage[charter]{mathdesign} % Bitstream Charter
+% \usepackage{newpxtext,newpxmath} % Palatino
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.50in}
+\addtolength{\evensidemargin}{-0.50in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{0.8in}
+
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemNoBullet}[2]{
+  \item[]\small{
+    \hspace{-9pt}\textbf{#1}{: #2 \vspace{-6pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+  \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \hspace{-10pt}\textbf{#1} & #2 \\
+      \hspace{-10pt}\textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+% custom commands
+\newcommand{\shorterSection}[1]{\vspace{-10pt}\section{#1}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\linespread{1.1}
+\begin{document}
+
+%----------HEADING-----------------
+\begin{center}
+  \small \textbf{\huge 姜伟雄} \\  
+  jiangwx@shanghaitech.edu.cn$\vert$ +86-17612153732 $\vert$ blog.csdn.net/lulugay $\vert$ github.com/jiangwx\\
+  \small 中国上海市浦东新区华夏中路393号
+\end{center}
+
+%-----------EDUCATION-----------------
+\shorterSection{教育背景}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {中国科学院大学/上海科技大学}{上海市}
+      {电路与系统博士;  GPA: 3.62/4.0}{预计2022.07毕业}
+    \resumeSubheading
+      {哈尔滨工业大学}{黑龙江省哈尔滨市}
+      {电磁场与无线技术学士;  GPA: 86.5/100, 排名：4/22}{2013.09 - 2017.6}
+  \resumeSubHeadingListEnd
+
+%-----------SKILLS-----------------
+\shorterSection{自我评价}
+  \resumeSubHeadingListStart
+  \small
+    \item{
+     \textbf{熟悉Xilinx FPGA基本原理和架构, 熟悉ZYNQ; 熟练使用C、Verilog、Python; 熟练使用Vivado、Vivado HLS、Petalinux、PYNQ等开发工具; 有系统级的设计能力, 能够独立完成神经网络部署到FPGA的全流程, 包括模型量化、加速器架构设计、系统设计; 拥有软硬件协同设计的概念; 拥有丰富的竞赛经历, 曾获ICCV-LPCVC'19亚军, DAC-SDC'20亚军; 曾发表过5篇第一作者文章, 包括一篇CCF A类会议(DAC'21), 一篇CCF C类会议(ISCAS'20); 另有两篇顶级期刊TCASI在投; 曾在Xilinx实习。}
+    }
+\resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\shorterSection{研究工作}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Enabling Fine-Grained Dynamic Voltage and Frequency Scaling in SDSoC, International Conference on System on Chip (SoCC), 2019(Oral)}
+     {
+        \vspace{-5pt}
+        \begin{itemize}
+            \item 通过动态配置MMCM模块实现动态频率调整
+            \item 通过动态配置电源管理芯片实现动态电压调整以及功耗监控
+            \item 将动态频率电压调整集成到SDSoC中, 将实现DVFS设计的迭代周期从几周降低到几分钟
+        \end{itemize}
+     }
+    \resumeSubItem{Energy Efficiency Optimization of FPGA-based CNN Accelerators using Full Data Reuse and VFS, International Conference on Embedded Circuit and System (ICECS), 2019(Oral)}
+    {
+    \begin{itemize}
+        \item 提出了双级存储及乒乓的CNN加速器架构
+        \item 将CNN加速器与DVFS相结合, 进一步优化CNN加速器的能效
+        \item 在ZCU104上实现了VGG16并取得了250GOPs的吞吐量和SOTA能效。
+    \end{itemize}
+    }
+    \resumeSubItem{Optimizing Energy Efficiency of CNN-Based Object Detection with Dynamic Voltage and Frequency Scaling, Journal of Semiconductor (JoS), 2019}
+    {
+    \begin{itemize}
+        \item 研究了DVFS对性能、功耗、能效以及准确率的影响
+        \item 相比SOTA, 性能提升54\%, 能效提升38\%
+    \end{itemize}
+    }
+    \resumeSubItem{An Accurate FPGA Online Delay Monitor Supporting All Timing Paths, International Symposium on Circuits and Systems (ISCAS, CCF-C), 2020(Oral)}
+    {
+    \begin{itemize}
+        \item 提出了一个适用于FPGA上所有路径的在线延迟检测电路, 由两个D触发器和一个或门组成
+        \item 提出了一种处理并测量时钟抖动的机制
+        \item 在不同电压下对浮点型乘法、除法、加法、平方运算器分别测量延迟, 取得了与标准值相差5\%以内的测量值
+    \end{itemize}
+    }
+    \resumeSubItem{TAIT: One-Shot Full-Integer Lightweight DNN Quantization via Tunable Activation Imbalance Transfer, Design Automation Conference (DAC, CCF-A), 2021(Oral)}
+    {
+    \begin{itemize}
+        \item 对量化过程进行建模, 分析了张量均衡程度对量化误差的影响
+        \item 提出了部分激活不均匀转移算法, 将激活的不均匀性部分转移到后一层的权重, 降低了激活的量化误差
+        \item 在SkyNet上取得了无损的INT8量化, 在MobileNetv2上取得了SOTA结果
+    \end{itemize}
+    }
+    \resumeSubItem{FODM: A Framework for Accurate Online Delay Measurement Supporting All Timing Paths in FPGA, IEEE Transaction on Circuit and System I (TCASI), Under Review}
+    {
+    \begin{itemize}
+        \item 在ISCAS'19的基础上提出了FODM框架, 能够快速将ODM部署到用户设计中
+        \item 提出了校准ODM的方法, 在8个benchmark上取得了1.51\%的平均误差
+    \end{itemize}
+    }
+    \resumeSubItem{Depthwise Convolution-Based DNN Acceleration on Edge FPGA with TAIT Quantization, IEEE Transaction on Circuit and System I (TCASI), Under Review}
+    {
+    \begin{itemize}
+        \item 完善了DAC'21中提出的TAIT量化算法
+        \item 提出统一且高效的加速器用于加速采用了深度分离卷积的神经网络
+        \item 提出硬件图像拼接方法, 能够显著降低图像预处理时间
+        \item 相比SOTA获得了2.7倍速度提升
+    \end{itemize}
+    }
+  \resumeSubHeadingListEnd
+
+\shorterSection{获奖}
+  \resumeSubHeadingListStart
+    \resumeSubItem{International Conference on Computer Vision, Low Power Computer Vision Contest (ICCV-LPCVC, CCF-A), 2019, FPGA Track, 2nd}
+    {
+    \vspace{-5pt}
+    \begin{itemize}
+        \item 根据比赛指标选择合适的模型, 确定ResNet269v2作为基准
+        \item 对ResNet269v2进行剪枝
+        \item 将ResNet29v2通过Xilinx的DPU工具链部署到Ultra96v2
+        \item 获得ICCV-LPCVC'19亚军, 参赛队伍来自国内外顶尖高校，如麻省理工、清华、北大、计算所、西安交大、西电等
+    \end{itemize}
+    }
+    \resumeSubItem{Design Automation Conference, System Design Contest (DAC-SDC, CCF-A), 2020, 2nd}
+    {
+        \vspace{-5pt}
+        \begin{itemize}
+            \item 掌握YOLO系列目标探测网络的原理
+            \item 以DAC-SDC'19的冠军设计SkyNet作为基线, 优化量化并重构加速器
+            \item 频率优化, 加速器频率从215MHz优化到400MHz
+            \item 构建加速器的完整系统，并进行调度策略优化
+            \item 相比DAC-SDC'19的冠军设计速度提升100\%, 精度提升1.5\%
+            \item 力压DAC-SDC'19的冠亚军, 获得DAC-SDC'20亚军, 全球共80余支队伍参赛
+        \end{itemize}
+     }
+    \resumeSubHeadingListEnd
+  
+%-----------EXPERIENCE-----------------
+\shorterSection{工作经历}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Xilinx大学计划}{上海}
+      {嵌入式系统实习生}{2017.10 - 2019.01}
+    \resumeSubHeadingListEnd
+    \resumeSubHeadingListStart
+        \resumeSubItem{深鉴深度学习处理器(DPU)的上手手册}{\\内容包括DPU的集成、DNNDK的使用以及DPU的部署}
+        \resumeSubItem{加速基于OpenCV的目标探测系统}{\\
+        定位原有探测算法计算密集的部分; 将计算密集的部分放进FPGA的逻辑中做加速; 优化Xilinx官方的OpenCV硬件实现版本; 相比未加速前的软件实现版本, 获得了10倍以上的加速}
+        \resumeSubItem{ZYNQBOOK: ZYNQ的入门书籍}{\\
+        负责基于ZYNQ的传统嵌入式开发、软硬件协同设计、基于SDSoC的软硬件协同设计以及使用Petalinux构建嵌入式操作系统等章节}
+        \resumeSubItem{加速深圳证券交易行情解码}{\\
+        掌握深证行情协议; 使用HLS对TCP/IP数据包进行解析，提取用户需要的信息并转换为用户定制的格式; 优化行情解码器的频率, 从100MHz优化到300MHz; 取得了1.5us的穿透延迟}
+    \resumeSubHeadingListEnd
+
+\end{document}
